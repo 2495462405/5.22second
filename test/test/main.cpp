@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
         Mat InMat;
         Mat OutMat;
         cap>>InMat;
-        Sobel(InMat,OutMat,CV_1);
+        GaussianBlur(InMat,OutMat,Size(3,3),1,0,BORDER_DEFAULT);
         imshow("InMat",InMat);
         imshow("OutMat",OutMat);
         
